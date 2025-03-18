@@ -1,0 +1,61 @@
+[gd_resource type="Terrain3DAssets" load_steps=16 format=3 uid="uid://rnjppv35qmo7"]
+
+[ext_resource type="PackedScene" uid="uid://djoymxmnjhaee" path="res://world/assets/models/American Elm tree corona.FBX" id="1_7kaos"]
+[ext_resource type="Texture2D" uid="uid://3uggk31g7h8u" path="res://world/assets/textures/rock030_alb_ht.dds" id="1_iymvg"]
+[ext_resource type="PackedScene" uid="uid://wjuqh7khclx5" path="res://world/assets/models/fir_sapling_medium_1k.gltf/fir_sapling_medium_1k.gltf" id="2_10gta"]
+[ext_resource type="Texture2D" uid="uid://d182wib661xn" path="res://world/assets/textures/rock30_nrm_rgh.png" id="2_gsmmc"]
+[ext_resource type="Texture2D" uid="uid://l1lse0lfk6a4" path="res://world/assets/textures/ground037_alb_ht.dds" id="3_klfw4"]
+[ext_resource type="Texture2D" uid="uid://bv0r7m0fo20vl" path="res://world/assets/textures/ground037_nrm_rgh.png" id="4_5o8i5"]
+[ext_resource type="Texture2D" uid="uid://cf42y31cww0ns" path="res://world/assets/textures/ground079s_alb_ht.dds" id="5_pu1bo"]
+[ext_resource type="Texture2D" uid="uid://bmie3qr7kusoj" path="res://world/assets/textures/ground079s_nrm_rgh.png" id="6_apc01"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mapyw"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 85.0
+distance_fade_max_distance = 75.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_2qf8x"]
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_mapyw")
+generated_type = 1
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_osd0b"]
+name = "American Elm tree corona"
+id = 1
+density = 0.01
+scene_file = ExtResource("1_7kaos")
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_bc8ui"]
+name = "fir_sapling_medium_1k"
+id = 2
+density = 0.0144123
+scene_file = ExtResource("2_10gta")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_0vh6w"]
+name = "Rock"
+albedo_texture = ExtResource("1_iymvg")
+normal_texture = ExtResource("2_gsmmc")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_od0q7"]
+name = "Grass"
+id = 1
+albedo_color = Color(0.664789, 0.740443, 0.676768, 1)
+albedo_texture = ExtResource("3_klfw4")
+normal_texture = ExtResource("4_5o8i5")
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_w2da0"]
+name = "Ground"
+id = 2
+albedo_texture = ExtResource("5_pu1bo")
+normal_texture = ExtResource("6_apc01")
+uv_scale = 0.5
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_2qf8x"), SubResource("Terrain3DMeshAsset_osd0b"), SubResource("Terrain3DMeshAsset_bc8ui")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_0vh6w"), SubResource("Terrain3DTextureAsset_od0q7"), SubResource("Terrain3DTextureAsset_w2da0")])

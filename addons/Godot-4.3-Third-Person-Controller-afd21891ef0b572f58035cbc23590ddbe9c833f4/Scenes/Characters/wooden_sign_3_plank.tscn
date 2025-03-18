@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://du5tqsdmmbhse"]
+
+[ext_resource type="PackedScene" uid="uid://cod2j01ikh84i" path="res://wooden_sign_3_plank.glb" id="1_extn4"]
+
+[node name="wooden_sign_3_plank" instance=ExtResource("1_extn4")]

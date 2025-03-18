@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvmuifj5ukq3u"]
+
+[ext_resource type="PackedScene" uid="uid://cvgkjhqv2vril" path="res://村长.glb" id="1_p2i6s"]
+
+[node name="村长" instance=ExtResource("1_p2i6s")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)

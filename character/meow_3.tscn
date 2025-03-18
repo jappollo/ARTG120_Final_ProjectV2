@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfik4pk23pcdy"]
+
+[ext_resource type="PackedScene" uid="uid://p686yfbagm43" path="res://character/meow3.fbx" id="1_37dc1"]
+
+[node name="meow3" instance=ExtResource("1_37dc1")]

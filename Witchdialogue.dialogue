@@ -1,0 +1,12 @@
+~ start
+Witch: They send a master witcher after me now, do they?
+- Your home, what happened?
+	Witch: They burned my home down.
+- They think you cursed them.
+	Witch: They curse themselves, Witcher. Their guilt, their hate. That’s the real poison...
+You: I won't kill you, but give me something to make them think you're gone.
+You: Maybe then you'll be safe from them.
+Witch: (hands you ancient necklace)
+
+END OF GAME
+=> END
