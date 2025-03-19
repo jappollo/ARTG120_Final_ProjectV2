@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://bo5o6pxddrxte"]
+[gd_scene load_steps=23 format=3 uid="uid://bo5o6pxddrxte"]
 
+[ext_resource type="Script" path="res://addons/audio_manager_3d/audio_manager_3d.gd" id="1_fp1br"]
 [ext_resource type="PackedScene" uid="uid://ds04nm3duscdb" path="res://world/assets/models/Longbow Locomotion Pack/Erika Archer.fbx" id="2_pvioj"]
 [ext_resource type="PackedScene" uid="uid://jpubpo7hhcrg" path="res://world/assets/models/MedievalHouse4/Medhouse4.FBX" id="3_48p7l"]
 [ext_resource type="Terrain3DMaterial" uid="uid://31o487qxr87b" path="res://world/data/new_terrain_3d_material.tres" id="3_mmekn"]
@@ -15,7 +16,9 @@
 [ext_resource type="Resource" uid="uid://ebtf1k8av43f" path="res://NPC1.dialogue" id="13_dqqhb"]
 [ext_resource type="PackedScene" uid="uid://dvmuifj5ukq3u" path="res://村长.tscn" id="14_dqqhb"]
 [ext_resource type="Resource" uid="uid://coe8rv6olw8f3" path="res://Witchdialogue.dialogue" id="15_h8lre"]
+[ext_resource type="Script" path="res://addons/audio_manager_3d/audio_manager_resource.gd" id="16_wimob"]
 [ext_resource type="PackedScene" uid="uid://wovcfijdi77" path="res://witch.glb" id="16_ysn08"]
+[ext_resource type="AudioStream" uid="uid://cwm3higvrvnj4" path="res://world/assets/audios/horror-background-music-313735.mp3" id="17_gaxk1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7pgo"]
 albedo_color = Color(0.513233, 0.513233, 0.513233, 1)
@@ -25,6 +28,24 @@ normal_enabled = true
 normal_texture = ExtResource("7_nd6rt")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dqqhb"]
+
+[sub_resource type="Resource" id="Resource_gw2ak"]
+script = ExtResource("16_wimob")
+audio_name = "Horror BGM"
+audio_stream = ExtResource("17_gaxk1")
+use_clipper = false
+start_time = 0.0
+end_time = 0.0
+volume_db = 0.0
+max_db = 3.0
+pitch_scale = 1.0
+max_distance = 100.0
+unit_size = 10.0
+loop = true
+loop_offset = 0.0
+auto_play = true
+max_polyphony = 1
+panning_strength = 1.0
 
 [node name="World" type="Node3D"]
 
@@ -44,13 +65,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 484.006, -8.34465e-07, 391.13
 transform = Transform3D(-0.19399, 0, 0.075, 0, 0.206, 0, -0.112, 0, -0.129904, 558.079, 0.1, 571.015)
 mesh = ExtResource("5_qdxpy")
 surface_material_override/0 = SubResource("StandardMaterial3D_r7pgo")
-
-[node name="Terrain3D" type="Terrain3D" parent="."]
-data_directory = "res://world/data"
-material = ExtResource("3_mmekn")
-assets = ExtResource("4_2ir8c")
-top_level = true
-metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("9_4papg")]
 transform = Transform3D(0.999996, 0, 0.00298452, 0, 1, 0, -0.00298452, 0, 0.999996, 483.509, 0, 433.648)
@@ -98,3 +112,14 @@ shape = SubResource("SphereShape3D_dqqhb")
 
 [node name="witch model" parent="Witch" instance=ExtResource("16_ysn08")]
 transform = Transform3D(-0.990719, 0, 0.135923, 0, 1, 0, -0.135923, 0, -0.990719, 10.6382, -1.90735e-06, 11.4155)
+
+[node name="AudioManager3D" type="Node3D" parent="."]
+script = ExtResource("1_fp1br")
+audios = Array[ExtResource("16_wimob")]([SubResource("Resource_gw2ak")])
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+data_directory = "res://world/data"
+material = ExtResource("3_mmekn")
+assets = ExtResource("4_2ir8c")
+top_level = true
+metadata/_edit_lock_ = true

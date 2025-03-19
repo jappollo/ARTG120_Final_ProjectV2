@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="ARTG120-FinalProjectV2"
-run/main_scene="uid://bo5o6pxddrxte"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://world/world.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,7 +21,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/audio_manager_3d/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/rubonnek.dialogue_engine/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [input]
 

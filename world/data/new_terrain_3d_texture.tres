@@ -1,12 +1,12 @@
 [gd_resource type="Terrain3DAssets" load_steps=16 format=3 uid="uid://rnjppv35qmo7"]
 
 [ext_resource type="PackedScene" uid="uid://djoymxmnjhaee" path="res://world/assets/models/American Elm tree corona.FBX" id="1_7kaos"]
-[ext_resource type="Texture2D" uid="uid://3uggk31g7h8u" path="res://world/assets/textures/rock030_alb_ht.dds" id="1_iymvg"]
+[ext_resource type="Texture2D" path="res://world/assets/textures/rock030_alb_ht.dds" id="1_iymvg"]
 [ext_resource type="PackedScene" uid="uid://wjuqh7khclx5" path="res://world/assets/models/fir_sapling_medium_1k.gltf/fir_sapling_medium_1k.gltf" id="2_10gta"]
 [ext_resource type="Texture2D" uid="uid://d182wib661xn" path="res://world/assets/textures/rock30_nrm_rgh.png" id="2_gsmmc"]
-[ext_resource type="Texture2D" uid="uid://l1lse0lfk6a4" path="res://world/assets/textures/ground037_alb_ht.dds" id="3_klfw4"]
+[ext_resource type="Texture2D" path="res://world/assets/textures/ground037_alb_ht.dds" id="3_klfw4"]
 [ext_resource type="Texture2D" uid="uid://bv0r7m0fo20vl" path="res://world/assets/textures/ground037_nrm_rgh.png" id="4_5o8i5"]
-[ext_resource type="Texture2D" uid="uid://cf42y31cww0ns" path="res://world/assets/textures/ground079s_alb_ht.dds" id="5_pu1bo"]
+[ext_resource type="Texture2D" path="res://world/assets/textures/ground079s_alb_ht.dds" id="5_pu1bo"]
 [ext_resource type="Texture2D" uid="uid://bmie3qr7kusoj" path="res://world/assets/textures/ground079s_nrm_rgh.png" id="6_apc01"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mapyw"]
